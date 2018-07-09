@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="beerItem" type="com.kotiyaltech.craftsbeer.model.BeerItem"/>
+        <import type="android.text.TextUtils"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+       <ImageView
+           android:id="@+id/beer_img"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           app:srcCompat = "@drawable/ic_beer"/>
+
+        <TextView
+            android:id="@+id/beerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewStyle"
+            android:text="@{beerItem.name}"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/beer_img"
+            android:layout_marginLeft="10dp"/>
+
+
+        <TextView
+            android:id="@+id/beerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewStyle"
+            android:gravity="center"
+            android:text="@{beerItem.style}"
+            android:layout_toRightOf="@+id/beer_img"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="10dp"
+            android:visibility="@{TextUtils.isEmpty(beerItem.style)? View.GONE: View.VISIBLE}"
+            android:drawableLeft="@drawable/ic_style_black_24dp"
+            android:layout_below="@+id/beerName"/>
+
+
+        <TextView
+            android:id="@+id/beerOunce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewStyle"
+            android:text="@{Double.toString(beerItem.ounces)}"
+            android:layout_toRightOf="@+id/beer_img"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:drawablePadding="8dp"
+            android:visibility="@{TextUtils.isEmpty(Double.toString(beerItem.ounces))? View.GONE: View.VISIBLE}"
+            android:drawableLeft="@drawable/ic_whisky"
+            android:layout_below="@+id/beerStyle"/>
+
+        <TextView
+            android:id="@+id/beerAlcho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewStyle"
+            android:text="@{beerItem.abv}"
+            android:visibility="@{TextUtils.isEmpty(beerItem.abv)? View.GONE: View.VISIBLE}"
+            android:layout_toRightOf="@+id/beer_img"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_no_alcohol"
+            android:drawablePadding="8dp"
+            android:layout_below="@+id/beerOunce"/>
+
+
+    </RelativeLayout>
+
+</layout>

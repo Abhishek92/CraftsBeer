@@ -1,0 +1,7 @@
+1. Unzip CraftsBeer submission file.
+2. There you will find screenshots, source code and app apk itself.
+3. import code into your android studio directly.
+4. Install apk on your phone.
+5. And enjoy your favourite beers.
+
+Thanks

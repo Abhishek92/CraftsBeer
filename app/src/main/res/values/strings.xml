@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CraftsBeer</string>
+    <string name="query_hint">Search by beer name</string>
+    <string name="select_your_favourite_beer_style">Select your favourite beer style</string>
+    <string name="all">ALL</string>
+    <string name="lager">LAGER</string>
+    <string name="ale">ALE</string>
+    <string name="stout">STOUT</string>
+    <string name="ipa">IPA</string>
+    <string name="porter">PORTER</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="search">Search</string>
+    <string name="craftbeers_n_your_beer_search_ends_here">CraftBeers \n Online store to order Crafted Beers..</string>
+    <string name="sort_desc_order">Sorted list in descending order by alcoholic content</string>
+    <string name="sort_asc_order">Sorted list in ascending order by alcoholic content</string>
+</resources>

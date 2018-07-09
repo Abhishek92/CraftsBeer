@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textViewStyle"
+        android:text="@string/select_your_favourite_beer_style"
+        android:padding="16dp"
+        android:textSize="16sp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@+id/title"
+        android:alpha="0.23"/>
+
+    <RadioGroup
+        android:id="@+id/beerStyleRG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:padding="16dp">
+        <RadioButton
+            android:id="@+id/AllRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            style="@style/textViewStyle"
+            android:text="@string/all"/>
+
+        <RadioButton
+            android:id="@+id/lagerRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            style="@style/textViewStyle"
+            android:text="@string/lager"/>
+
+        <RadioButton
+            android:id="@+id/aleRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            style="@style/textViewStyle"
+            android:text="@string/ale"/>
+
+        <RadioButton
+            android:id="@+id/stoutRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            style="@style/textViewStyle"
+            android:text="@string/stout"/>
+        <RadioButton
+            android:id="@+id/ipaRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            style="@style/textViewStyle"
+            android:text="@string/ipa"/>
+        <RadioButton
+            android:id="@+id/porterRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            style="@style/textViewStyle"
+            android:text="@string/porter"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/beerStyleRG"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:padding="16dp"
+        style="@style/textViewStyle"
+        android:text="@string/cancel"
+        />
+
+    <TextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/beerStyleRG"
+        android:padding="16dp"
+        style="@style/textViewStyle"
+        android:layout_marginRight="32dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/ok"
+        />
+
+</RelativeLayout>
